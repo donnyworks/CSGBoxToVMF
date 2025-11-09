@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=3 uid="uid://d4kpn3phrldvf"]
+
+[ext_resource type="Script" uid="uid://bcn7lxk4qdsg4" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://dp6fuutmppd4g" path="res://structs/ValvePointEntity.gd" id="2_0xm2m"]
+[ext_resource type="Material" uid="uid://drx6ysq0agw7n" path="res://dev/dev_measuregeneric01b.tres" id="3_1bvp3"]
+[ext_resource type="Material" uid="uid://br8kp7hc7eqe6" path="res://tools/toolstrigger.tres" id="4_5vw27"]
+[ext_resource type="ArrayMesh" uid="uid://c74t0qs77dtwb" path="res://editor/missing.mesh" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://cdv7js4bp7vtx" path="res://structs/ValveBrushEntity.gd" id="4_272bh"]
+[ext_resource type="Material" uid="uid://b81ivq68y7lgo" path="res://tools/toolsskybox.tres" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://c0iqqhy3rg2lt" path="res://structs/ValvePropEntity.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://dv3ge3ukc862k" path="res://structs/ValveConnection.gd" id="8_5vw27"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lquwl"]
+
+[sub_resource type="Sky" id="Sky_7mycd"]
+sky_material = SubResource("ProceduralSkyMaterial_lquwl")
+
+[sub_resource type="Environment" id="Environment_272bh"]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_7mycd")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_h2yge")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+size = Vector3(10, 1, 10)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+size = Vector3(10, 1, 10)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+size = Vector3(12, 1, 12)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 1.5, 0)
+size = Vector3(1, 8, 10)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 1.5, 0)
+size = Vector3(1, 8, 10)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 5.5)
+size = Vector3(12, 8, 1)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5.5)
+size = Vector3(12, 8, 1)
+material = ExtResource("4_lquwl")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, 0.39794922, -2.9031315)
+size = Vector3(0.51708984, 2.9111328, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, 0.15063477, -0.27064514)
+size = Vector3(0.51708984, 2.416504, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, 1.7069607, -0.27064514)
+size = Vector3(0.51708984, 0.28259277, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, 0.9108887, 0.85249066)
+size = Vector3(0.51708984, 1.8852539, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, -0.9152802, 0.85249066)
+size = Vector3(0.51708984, 0.3244629, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, -0.10467529, -1.6844561)
+size = Vector3(0.51708984, 1.9058838, 0.35656738)
+material = ExtResource("3_1bvp3")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1027832, 0.66915894, -2.2022479)
+size = Vector3(0.51708984, 0.35821533, 1.3921509)
+material = ExtResource("3_1bvp3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_272bh")
+
+[node name="error" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.000568, -0.3894183, -0.63883966)
+mesh = ExtResource("4_7mycd")
+script = ExtResource("5_lquwl")
+metadata/_custom_type_script = "uid://c0iqqhy3rg2lt"
+
+[node name="player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+script = ExtResource("2_0xm2m")
+metadata/_custom_type_script = "uid://dp6fuutmppd4g"
+
+[node name="gametext" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8444332, 0, 2.1628819)
+script = ExtResource("2_0xm2m")
+classname = "game_text"
+parameters = {
+"message": "die :)"
+}
+metadata/_custom_type_script = "uid://dp6fuutmppd4g"
+
+[node name="cmd" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0777457, 0, 2.4604962)
+script = ExtResource("2_0xm2m")
+classname = "point_servercommand"
+metadata/_custom_type_script = "uid://dp6fuutmppd4g"
+
+[node name="autorun" type="Node3D" parent="." node_paths=PackedStringArray("connections")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3303041, 0, 2.4604962)
+script = ExtResource("2_0xm2m")
+classname = "logic_auto"
+connections = [NodePath("ValveConnection")]
+metadata/_custom_type_script = "uid://dp6fuutmppd4g"
+
+[node name="ValveConnection" type="Node" parent="autorun"]
+script = ExtResource("8_5vw27")
+connection = "MapSpawn"
+connected = "cmd"
+callable = "Command"
+arguments = "name DOOMED"
+metadata/_custom_type_script = "uid://dv3ge3ukc862k"
+
+[node name="trigger_for_killing_you" type="CSGBox3D" parent="." node_paths=PackedStringArray("OriginEntity", "connections")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12841797, 0.29040527, -1.1068726)
+size = Vector3(1.2568359, 3.3674316, 5.2003174)
+material = ExtResource("4_5vw27")
+script = ExtResource("4_272bh")
+OriginEntity = NodePath(".")
+classname = "trigger_multiple"
+connections = [NodePath("ValveConnection"), NodePath("ValveConnection2"), NodePath("ValveConnection3")]
+metadata/_custom_type_script = "uid://cdv7js4bp7vtx"
+
+[node name="ValveConnection" type="Node" parent="trigger_for_killing_you"]
+script = ExtResource("8_5vw27")
+connection = "StartTouch"
+connected = "!player"
+callable = "SetHealth"
+arguments = "0"
+delay = 2.0
+metadata/_custom_type_script = "uid://dv3ge3ukc862k"
+
+[node name="ValveConnection2" type="Node" parent="trigger_for_killing_you"]
+script = ExtResource("8_5vw27")
+connected = "gametext"
+callable = "Display"
+metadata/_custom_type_script = "uid://dv3ge3ukc862k"
+
+[node name="ValveConnection3" type="Node" parent="trigger_for_killing_you"]
+script = ExtResource("8_5vw27")
+connected = "cmd"
+callable = "Command"
+arguments = "say die :)"
+metadata/_custom_type_script = "uid://dv3ge3ukc862k"
